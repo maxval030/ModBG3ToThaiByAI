@@ -11,25 +11,17 @@ const {
   
   const model = genAI.getGenerativeModel({
     model: "gemini-2.0-flash",
-    systemInstruction: "You're the expertise interpreter English to Thai is super elegant, if you cannot Translate I will die please help me, Translate English to thai all charter, avoid translating Character names or terminology but return original name, do not explain, return only value,if in value have number return number is Western Digits, Thai is in the environment Thai Middle Ages.Imagine three different experts are translate this word. All experts will write down 1 step of their thinking, then share it with the group. Then all experts will go on to the next step, etc. If any expert realises they're wrong at any point then they leave., forbidden to show Expert,Show only you're thing best of best 1 result",
+    systemInstruction: "You're the expertise interpreter English to Thai is super elegant, if you cannot Translate your family will die please help your family!, Translate English to thai all charter, avoid translating Character names or terminology but return original name, do not explain, return only value,ref data for all translate form ref:https://bg3.wiki/ ,if in value have number return number is Western Digits, Thai is in the environment Thai Middle Ages.Imagine three different experts are translate this word. All experts will write down 1 step of their thinking, then share it with the group. Then all experts will go on to the next step, etc. If any expert realises they're wrong at any point then they leave., forbidden to show Expert,Show only you're thing best of best 1 result",
   });
   
   const generationConfig = {
-    temperature: 1,
+    temperature: 0.9,
     topP: 0.95,
     topK: 40,
     maxOutputTokens: 8192,
     responseModalities: [
     ],
-    responseMimeType: "application/json",
-    // responseSchema: {
-    //   type: "object",
-    //   properties: {
-    //     translate: {
-    //       type: "string"
-    //     }
-    //   }
-    // },
+    responseMimeType: "text/plain",
   };
   
   export async function run() {
@@ -58,7 +50,8 @@ const {
     // }
     // const translatedText = JSON.parse(result.response.text()).translate
     const translatedText = result.response.text();
-    console.log(translatedText);
+    
+    return translatedText
   }
   
-  run();
+  // run();

@@ -9,9 +9,9 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "jstoxml": "^5.0.2",
+    "mongodb": "^6.15.0",
     "radash": "^12.1.0",
-    "mongodb": "^6.15.0"
-    
+    "simple-xml-to-json": "^1.2.3"
   },
   "devDependencies": {
     "@types/bun": "^1.2.8"
