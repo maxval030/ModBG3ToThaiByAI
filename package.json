@@ -11,6 +11,7 @@
     "fast-array-diff": "^1.1.0",
     "jstoxml": "^5.0.2",
     "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2",
     "radash": "^12.1.0",
     "simple-xml-to-json": "^1.2.3"
   },

@@ -6,6 +6,7 @@ import {
 
 import { isEmpty, parallel, sleep } from "radash";
 import { translateByAi } from "./connectAI";
+import { mongooseDisconnect } from "./db/connectDB";
 
 let countErr = 0;
 
@@ -16,7 +17,7 @@ const index = async () => {
 
   while (true) {
     const result = await findTranslateCollection(limit);
-    // console.log("result>>>", result);
+
 
     if (isEmpty(result)) {
       console.log("loop break");
@@ -73,10 +74,12 @@ const runAny = async () => {
     // }
     // await sleep(900000);
     console.log("WAITING >>>>", "30 s");
-    await sleep(40000);
+    await sleep(20000);
     countErr = ++countErr;
 
     await runAny();
+  } finally {
+    await mongooseDisconnect()
   }
 };
 
