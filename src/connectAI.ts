@@ -1,7 +1,5 @@
 const {
     GoogleGenerativeAI,
-    HarmCategory,
-    HarmBlockThreshold,
   } = require("@google/generative-ai");
   const fs = require("node:fs");
 //   const mime = require("mime-types");
@@ -24,14 +22,14 @@ const {
     responseMimeType: "text/plain",
   };
   
-  export async function run() {
+  export async function translateByAi(text: string):Promise<string> {
     const chatSession = model.startChat({
       generationConfig,
       history: [
       ],
     });
   
-    const result = await chatSession.sendMessage("[A letter stamped with the bright seal of Ansur's Finest, an adventuring guild based in Baldur's Gate.]");
+    const result = await chatSession.sendMessage(text);
     // TODO: Following code needs to be updated for client-side apps.
     // const candidates = result.response.candidates;
     // for(let candidate_index = 0; candidate_index < candidates.length; candidate_index++) {

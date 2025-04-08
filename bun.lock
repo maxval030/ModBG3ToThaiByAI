@@ -5,6 +5,7 @@
       "name": "translatebg3ver2",
       "dependencies": {
         "@google/generative-ai": "^0.24.0",
+        "fast-array-diff": "^1.1.0",
         "jstoxml": "^5.0.2",
         "mongodb": "^6.15.0",
         "radash": "^12.1.0",
@@ -36,6 +37,8 @@
     "bson": ["bson@6.10.3", "", {}, "sha512-MTxGsqgYTwfshYWTRdmZRC+M7FnG1b4y7RO7p2k3X24Wq0yv1m77Wsj0BzlPzd/IowgESfsruQCUToa7vbOpPQ=="],
 
     "bun-types": ["bun-types@1.2.7", "", { "dependencies": { "@types/node": "*", "@types/ws": "*" } }, "sha512-P4hHhk7kjF99acXqKvltyuMQ2kf/rzIw3ylEDpCxDS9Xa0X0Yp/gJu/vDCucmWpiur5qJ0lwB2bWzOXa2GlHqA=="],
+
+    "fast-array-diff": ["fast-array-diff@1.1.0", "", {}, "sha512-muSPyZa/yHCoDQhah9th57AmLENB1nekbrUoLAqOpQXdl1Kw8VbH24Syl5XLscaQJlx7KRU95bfTDPvVB5BJvw=="],
 
     "jstoxml": ["jstoxml@5.0.2", "", {}, "sha512-p/Uyi1nSlAcOL+FbWCbTLAHtMbk/QlPMAE/wRLek7W8646jWII3GtLEKSBzf97UitieRWj1VZcbZxs8arq2nbg=="],
 
