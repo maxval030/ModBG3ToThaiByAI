@@ -25,8 +25,8 @@ export async function translateByAi(text: string): Promise<string> {
     generationConfig,
     history: [],
   });
-
-  const result = await chatSession.sendMessage(text);
+  const textPrompt = `Translate to Thai: ${text}`;
+  const result = await chatSession.sendMessage(textPrompt);
   // TODO: Following code needs to be updated for client-side apps.
   // const candidates = result.response.candidates;
   // for(let candidate_index = 0; candidate_index < candidates.length; candidate_index++) {
