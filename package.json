@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
+    "@types/jstoxml": "^5.0.0",
     "fast-array-diff": "^1.1.0",
     "jstoxml": "^5.0.2",
     "mongodb": "^6.15.0",

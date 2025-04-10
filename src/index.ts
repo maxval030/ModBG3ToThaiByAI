@@ -13,7 +13,7 @@ let countErr = 0;
 const index = async () => {
   let count = 1;
   let round = 1;
-  const limit = 30;
+  const limit = 50;
 
   while (true) {
     const result = await findTranslateCollection(limit);
@@ -48,7 +48,7 @@ const index = async () => {
 
     if (count >= 40) {
       console.log("WAITING >>>>", "1 min");
-      await sleep(40000);
+      await sleep(30000);
       round = ++round;
       count = 1;
     } else {
