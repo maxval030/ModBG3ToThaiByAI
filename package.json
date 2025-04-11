@@ -6,6 +6,11 @@
   "engines": {
     "bun": ">=1.2.8"
   },
+  "scripts":{
+    "runTranslate": "bun run index.ts",
+    "jsonToXml": "bun run jsonToXml.ts",
+    "xmlToJson": "bun run xmlToJson.ts"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
     "@types/jstoxml": "^5.0.0",
