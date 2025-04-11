@@ -30,7 +30,7 @@ const bg3TranslateVer2 = new mongoose.Schema(
         content: { type: String, required: true },
         thai: { type: String },
         version: { type: String },
-        notTranslate: {type: Boolean, default: false},
+        skip: {type: Boolean, default: false},
       },
       errorTranslate: { type: Boolean, default: false },
       required: true,
