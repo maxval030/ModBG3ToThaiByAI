@@ -35,5 +35,5 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 node_modules
 
-fileTranslateXML/*.json
-BG3localizeEng/*.xml
+fileTranslateXML
+BG3localizeEng
