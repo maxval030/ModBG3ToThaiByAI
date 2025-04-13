@@ -14,19 +14,26 @@ import { Bg3TranslateVer2Model } from "./schema";
 //   return result;
 // };
 export const findTranslateCollection = async (limit: number) => {
-
   await mongooseConnect();
-  
+
   const result = await Bg3TranslateVer2Model.find({
-    "content.thai": null,}).limit(limit).exec();
+    "content.thai": null,
+    "content.skip": null,
+  })
+    .limit(limit)
+    .exec();
 
   return result;
 };
 
-export const updateTranslateCollection = async (_id: string, content: string) => {
+export const updateTranslateCollection = async (
+  _id: string,
+  content: string
+) => {
   await mongooseConnect();
 
-  const result = await Bg3TranslateVer2Model.updateOne({
+  const result = await Bg3TranslateVer2Model.updateOne(
+    {
       _id: new ObjectId(_id),
     },
     {
@@ -35,9 +42,9 @@ export const updateTranslateCollection = async (_id: string, content: string) =>
       },
     }
   ).exec();
-  
+
   return result;
-}
+};
 // export const updateTranslateCollection = async (_id: string, content: string) => {
 //   const client = (await DOS2TranslateClient()).collection("bg3TranslateVer2");
 //   const result = await client.updateOne({
@@ -54,8 +61,9 @@ export const updateTranslateCollection = async (_id: string, content: string) =>
 
 export const updateError = async (_id: string) => {
   await mongooseConnect();
- 
-  await Bg3TranslateVer2Model.updateOne({
+
+  await Bg3TranslateVer2Model.updateOne(
+    {
       _id: new ObjectId(_id),
     },
     {
@@ -64,4 +72,4 @@ export const updateError = async (_id: string) => {
       },
     }
   );
-}
+};
